@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            background-image: linear-gradient(red, blue);
+            width: 100%;
+            height: 100vh;
+        }
+
+
+        .center {
+            width: 250px;
+            height: 200px;
+            background-image: linear-gradient(yellow, green);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+
+
+        }
+
+        img {
+            width: 100px;
+            height: 80px;
+            position: absolute;
+            margin-top: -60px;
+            left: calc((250px - 100px)/2);
+
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+
+        }
+
+        #textname {
+            margin: auto;
+            display: block;
+            width: calc(100% - 100px);
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        #textpass {
+            margin: auto;
+            display: block;
+            width: calc(100% - 100px);
+            font-weight: bold;
+
+        }
+
+        #sub {
+            margin: auto;
+            display: block;
+            width: calc(100% - 100px);
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="center">
+
+            <img src="img/logo.png" alt="Broken_logo"><br>
+            <h2>Login</h2>
+            <input type="text" placeholder="Enter User_ID" id="textname"><br>
+            <input type="password" name="" placeholder="Enter Password" id="textpass"><br>
+
+            <button type="submit" id="sub" onclick="myfun()">Submit</button>
+        </div>
+
+
+    </div>
+
+</body>
+
+        <script>
+
+            function myfun(){
+
+            
+            var name = document.getElementById('textname').value;
+            var pass = document.getElementById('textpass').value;
+
+            if(name=="")
+            {
+                alert('Please enter name')
+            }
+            else if(name.length<3)
+            {
+                alert('more than 3 alphabates')
+            }
+            else if(name.length>20)
+            {
+                alert('Not more than 20 alphabates')
+            }
+            else if(!isNaN(name))
+            {
+                alert('Number not allowed')
+            }
+
+            
+            if(pass=="")
+            {
+                alert('Number Password')
+            }
+            else if(pass.length<8)
+            {
+                alert('Enter strong Min-8 char. password')
+            }
+        }
+
+        </script>
+
+</html>
